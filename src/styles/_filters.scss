@@ -1,0 +1,49 @@
+.filters {
+    margin-bottom: 24px;
+    select {
+        width: 100%;
+        margin-bottom: 19px;
+        appearance: none;
+        border: 2px solid $bg-black;
+        background:transparent;
+        background: url('../images/play-button.svg')98% center  no-repeat;
+        background-size: 12px auto;
+        height: 24px;
+        cursor: pointer;
+        option {
+            text-transform: capitalize;
+        }
+    }
+
+    .btn {
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+    .btn-main {
+        border-color: hsla(0, 0%, 100%, .2);
+        border: 1px solid #222;
+        background: #222;
+        color: #fff;
+        -webkit-transition: opacity .15s linear;
+        transition: opacity .15s linear;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+    @media(min-width:515px) and (max-width: 767px){
+        padding-right: 10px;
+        padding-top: 7px;
+    }
+}
+
+@media (min-width:768px) {
+    .filters {
+        margin-bottom: 24px;
+        border-bottom: 1px solid $bg-black;
+        padding-bottom: 16px;
+    }
+}

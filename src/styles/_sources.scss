@@ -1,0 +1,36 @@
+.sources {
+    ul {
+        li {
+            border-bottom: 1px solid #222;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                cursor: pointer;
+                padding-top: 4px;
+                &:hover{
+                    text-decoration: none;
+                    opacity: 0.7;
+                }
+                &:after {
+                    content: '';
+                    background: url('../images/arrow-w.svg') center center no-repeat #000;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    background-size: contain;
+                    left: auto;
+                    right: 0;
+                    top: calc(50% - 8px);
+                }
+            }
+        }
+    }
+    @media(min-width:515px) and (max-width: 767px){
+        padding-left: 10px;
+    }
+}

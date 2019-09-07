@@ -1,0 +1,101 @@
+.card{
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    .reorder{
+        order: 1;
+    }
+    a{
+        text-decoration: none;
+    }
+    h2{
+        font-family: $fontHeavy;
+        padding-left: 16px;
+        margin-top: 24px;
+    }
+    .img-container{
+        order: 0;
+        img{
+            max-width: 100%;
+            height: auto;
+            &.noimage{
+                max-height: 350px;
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .content{
+        order: 2;
+        padding: 0 16px;
+        .date{
+            font-size: 0.9rem;
+            color: $text-gray;
+        }
+        p{
+            text-align: justify;
+        }
+        .readmore-link{
+            font-size: 18px;
+            font-family: $fontHeavy;
+            display: block;
+            width: 100%;
+            text-align: right;
+            a{
+                text-decoration: underline;
+                transition: opacity ease-in-out 0.3s 0s;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+@media(min-width: 768px){
+.card{
+    &:hover{
+        box-shadow: 0px 2px 8px rgba(51,48,46,0.2);
+        text-decoration: none;
+    }
+}
+
+}
+@media(min-width:1024px){
+    .card{
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: none;
+        border-radius: 0;
+        padding: 16px 0;
+        h2{
+            padding-left: 16px;
+            margin-bottom: 24px;
+            margin-top: 0px;
+        }
+        .reorder{
+            order: 0;
+            flex: 1 1 100%;
+        }
+        .img-container{
+            order: 1;
+            flex: 1 1 30%;
+            padding-left: 16px;
+            img{
+                &.noimage{
+                    max-height: 215px;
+                }
+            }
+
+        }
+        .content{
+            flex: 1 1 70%;
+            p{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
