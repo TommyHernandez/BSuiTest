@@ -26,7 +26,7 @@ function App() {
   };
   const handleNewsBySource = () => (sr) => {
     setShowLoader(true);
-    if(window.outerWidth() < 1024){
+    if(window.outerWidth < 1024){
       setToggleFilter(false);
     }
     restApi.getNewsList(sr).then(data => {

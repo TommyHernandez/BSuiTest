@@ -14,7 +14,7 @@ export const FilterComponent = (props) => {
     let cat, lang;
     return (<div className="filters">
         <select name="" onChange={(e) => cat = e.target.value}>
-            <option value="">Sleect Category</option>
+            <option value="">Select Category</option>
             {
                 categoryList.map(el => <option key={el} value={el}>{el}</option>)
             }
