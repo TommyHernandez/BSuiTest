@@ -20,7 +20,7 @@ export const FilterComponent = (props) => {
             }
         </select>
         <select name="" onChange={(e) => lang = e.target.value}>
-            <option value="" >Select Lenguaje </option>
+            <option value="" >Select Language </option>
             {
                 langList.map(el => <option key={el} value={el}>{el}</option>)
             }
