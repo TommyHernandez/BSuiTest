@@ -6,7 +6,7 @@ const getPrettyDate = (date) => {
 };
 export const ArticleCard = (props) => {
   return (
-    <article key={props.publishedAt} className="card">
+    <article className="card">
       <a
         href={props.url}
         className="reorder"
@@ -18,7 +18,7 @@ export const ArticleCard = (props) => {
       </a>
       <div className="img-container">
         <img
-          src={props.urlToImage ? props.urlToImage : noimg}
+          src={props.urlToImage !== 'null' ? props.urlToImage : noimg}
           className={props.urlToImage ? '' : 'noimage'}
           alt="article main"
         />
