@@ -1,18 +1,18 @@
 import React from 'react';
 import { SourceItem } from '../source-item/sourceitem';
 
-export const SourceContainer = (props) => (
+export const SourceContainer = ({ sources, handleNews }) => (
   <div className="sources">
     <ul>
-      {props.sources.length ? (
-        props.sources.map((src, i) => {
+      {sources.length ? (
+        sources.map((src, i) => {
           return (
             <SourceItem
               text={src.name}
               key={i}
               clickHandler={(e) => {
                 e.preventDefault();
-                props.handleNews(src.id);
+                handleNews(src.id);
                 console.log(src.id);
               }}
             />

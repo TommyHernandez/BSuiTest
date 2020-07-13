@@ -9,7 +9,7 @@ import { restApi } from './api/restapi';
 function App() {
   const [news, setNews] = useState([]);
   const [sources, setSources] = useState([]);
-  const [showLoader, setShowLoader] = React.useState(true);
+  const [showLoader, setShowLoader] = useState(true);
   useEffect(() => {
     restApi.getSources().then((sdata) => {
       setSources(sdata.slice(0, 5));
